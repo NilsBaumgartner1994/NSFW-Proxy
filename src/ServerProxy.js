@@ -128,7 +128,6 @@ async function startServer() {
     app.use(Express.static(path.join(__dirname, "static")));
 
     app.use("/api/*", apiProxy); // this will proxy all incoming requests to /api route to back end
-    app.use("/metrics/*", apiMetrics);
     app.use("/*", apiFrontend); // this will proxy all incoming requests to /client route to front end
 
 // start the server
